@@ -1,9 +1,10 @@
-const num1 = 5
-const num2 = 10
+// Defining two numbers
+const num1 = 5;
+const num2 = 10;
 
-function addvalues(){
-    console.log(`the sum is : ${num1 + num2}`);
-    
+// Function to add the numbers and log the result
+function addValues() {
+    console.log(`The sum is : ${num1 + num2}`);
 }
 
-addvalues()  
+addValues(); // Calling the function immediately

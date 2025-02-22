@@ -1,36 +1,22 @@
-const { readFile, writeFile } = require('fs').promises
-// const util = require('util')
-// const readFilePromise = util.promisify(readFile)
-// const writeFilePromise = util.promisify(writeFile)
+const { readFile, writeFile } = require('fs').promises; // Using Promises with fs module
 
 const start = async () => {
-  try {
-    const first = await readFile('./content/first.txt', 'utf8')
-    const second = await readFile('./content/second.txt', 'utf8')
-    await writeFile(
-      './content/result-mind-grenade.txt',
-      `THIS IS AWESOME : ${first} ${second}`,
-      { flag: 'a' }
-    )
-    console.log(first, second)
-  } catch (error) {
-    console.log(error)
-  }
-}
+    try {
+        // Read files asynchronously using await
+        const first = await readFile('./content/first.txt', 'utf8');
+        const second = await readFile('./content/second.txt', 'utf8');
+        
+        // Write file asynchronously
+        await writeFile(
+            './content/result-mind-grenade.txt',
+            `THIS IS AWESOME : ${first} ${second}`,
+            { flag: 'a' }
+        );
+        
+        console.log(first, second); // Log file contents
+    } catch (error) {
+        console.log(error); // Handle errors
+    }
+};
 
-start()
-
-// const getText = (path) => {
-//   return new Promise((resolve, reject) => {
-//     readFile(path, 'utf8', (err, data) => {
-//       if (err) {
-//         reject(err)
-//       } else {
-//         resolve(data)
-//       }
-//     })
-//   })
-// }
-// getText('./content/first.txt')
-//   .then((result) => console.log(result))
-//   .catch((err) => console.log(err))
+start();

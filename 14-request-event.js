@@ -1,15 +1,11 @@
-const http = require('http')
+const http = require('http'); // Importing HTTP module
 
-// const server = http.createServer((req, res) => {
-//   res.end('Welcome')
-// })
+// Creating an HTTP server using EventEmitter API
+const server = http.createServer();
 
-// Using Event Emitter API
-const server = http.createServer()
-// emits request event
-// subcribe to it / listen for it / respond to it
+// Listening for request events
 server.on('request', (req, res) => {
-  res.end('Welcome')
-})
+    res.end('Welcome'); // Responding to the request
+});
 
-server.listen(5000)
+server.listen(5000); // Server listening on port 5000

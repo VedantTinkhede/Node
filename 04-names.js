@@ -1,10 +1,10 @@
-// local
-const secret ='secret'               // since we are not exporting this, it is not available outside this file
+// Defining local and shared variables
+const secret = 'secret'; // Local variable (not exported)
 
-// share
-const john = `john`
-const peter = `peter`
+// Shared variables
+const john = 'john';
+const peter = 'peter';
 
-
-module.exports = {john, peter}      // this is an object with two properties john and peter
-                                   // we define that only john and peter are to be shared
+// Exporting the shared variables as an object
+module.exports = { john, peter }; // This is the way to export multiple variables. This is the way to make them available to other files.
+// Exporting the shared variables as an array

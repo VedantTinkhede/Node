@@ -1,7 +1,10 @@
-module.exports.items = ['item1', 'item2'] // this is the way to export an array. This is the way to make it available to other files.
+// Exporting an array directly
+module.exports.items = ['item1', 'item2'];
+
+// Creating an object
 const person = {
     name: 'bob',
+};
 
-}
-
-module.exports.singleperson = person  // this is the way to export an object. This will share it as a variable to other files.
+// Exporting the object as 'singleperson'
+module.exports.singleperson = person;

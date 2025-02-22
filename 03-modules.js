@@ -1,10 +1,10 @@
-const names = require('./4-names')
+// Importing modules using 'require'
+const names = require('./4-names'); // Importing names object from 04-names.js
 console.log(names);
 
-const sayhi = require('./5-utils')
-sayhi(names.john)
+const sayHi = require('./5-utils'); // Importing function from 05-utils.js
+sayHi(names.john); // Calling the function with 'john'
 
-const person = require('./6-alternative-flavour')
+const person = require('./6-alternative-flavour'); // Importing an object from 06-alternative-flavour.js
 
-require('./7-mind-grenade')  // since we are not exporting anything from 7-mind-grenade.js, we can just require it and it will run the code in it.
-
+require('./7-mind-grenade');  // Just executing the file (it runs without exporting anything)

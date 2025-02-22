@@ -1,19 +1,18 @@
-const os = require('os');
+const os = require('os'); // Importing the built-in 'os' module
 
-
-// info about current user
+// Getting information about the current user
 const user = os.userInfo();
 //console.log(user);
 
-// method returns the system uptime in seconds
-//console.log(`The system uptime is ${os.uptime()} seconds`);  //shows how long the system has been running
+// Logging system uptime
+//console.log(`The system uptime is ${os.uptime()} seconds`);
 
-const currentos = {
+// Getting various OS details
+const currentOS = {
     name: os.type(),
-    release:os.release(),
-    totalMem:os.totalmem(),
-    freeMem:os.freemem(),
-}
+    release: os.release(),
+    totalMem: os.totalmem(),
+    freeMem: os.freemem(),
+};
 
-console.log(currentos);
-
+console.log(currentOS);

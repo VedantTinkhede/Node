@@ -1,7 +1,8 @@
-// started operating system process
-console.log('first')
+console.log('first'); // Logging first message
+
+// Scheduling a callback to execute after 0 milliseconds
 setTimeout(() => {
-  console.log('second')
-}, 0)
-console.log('third')
-// completed and exited operating system process
+    console.log('second');
+}, 0);
+
+console.log('third'); // Logging third message before setTimeout executes

@@ -1,13 +1,14 @@
-// globals - no window
+// Demonstrating global variables in Node.js (there is no 'window' object like in browsers)
 
-// __dirname - path to current directory
-// __filename - file name
-// require - function to use modules (CommonJS)
-// module - info about current module (file)
-// process - info about env where the program is being executed
+// __dirname - Path to the current directory
+// __filename - Name of the current file
+// require - Function to import modules
+// module - Information about the current module
+// process - Information about the execution environment
 
-console.log(__dirname);
-setInterval(() => {                         // its a built in function that will do things after a certain interval
+console.log(__dirname); // Logs the directory path
+
+// Set an interval to log 'hello world' every second
+setInterval(() => {
     console.log('hello world');
-    
-}, 1000);                                   // 1000 milliseconds = 1 second. Thus it will print 'hello world' every second
+}, 1000);  // Runs every 1000 milliseconds (1 second)

@@ -1,13 +1,14 @@
-const path = require('path');
-console.log(path.sep);
+const path = require('path'); // Importing the 'path' module
+console.log(path.sep); // Logging the system-specific path separator
 
+// Creating a file path using 'join'
+const filePath = path.join('/content', 'subfolder', 'test.txt');
+console.log(filePath);
 
-const filepath = path.join('/content','subfolder','test.txt')
-console.log(filepath);
-
-
-const base = path.basename(filepath)
+// Getting the base name of the file
+const base = path.basename(filePath);
 console.log(base);
 
-const absolute = path.resolve(__dirname,'content','subfolder','test.txt')
+// Getting the absolute path
+const absolute = path.resolve(__dirname, 'content', 'subfolder', 'test.txt');
 console.log(absolute);
